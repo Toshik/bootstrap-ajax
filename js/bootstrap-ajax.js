@@ -200,6 +200,9 @@
           $.getJSON($(value).data('refresh-url'), function(data) {
             $(value).replaceWith(data.html)
           })
+          $.getJSON($(value).data('refresh-url-inner'), function(data) {
+            $(value).html(data.html)
+          })
         })
       }
       if (refresh_closest_selector) {
